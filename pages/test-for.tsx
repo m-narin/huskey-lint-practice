@@ -1,3 +1,3 @@
-export const hello = (n: string) => {
+export const hello = (n: number) => {
   return n
 }
