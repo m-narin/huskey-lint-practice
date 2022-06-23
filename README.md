@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## huskey lintの練習
 
-## Getting Started
+参考URL
+https://zenn.dev/kurao/articles/456f44a6f43d89
 
-First, run the development server:
+1 ルートdirに`tsconfig.json`を作成
 
-```bash
-npm run dev
-# or
-yarn dev
+2 ターミナルで以下を実行
+
+```yarn add --dev typescript @types/react @types/node```
+
+3 ターミナルで以下を実行
+
+```yarn add --dev eslint typescript @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-react```
+
+4 ルートdirに`tsconfig.eslint.json`を作成
+
+5 `tsconfig.eslint.json`にソースコードを記述
+
+6 ルートdirに`.eslintrc.json`を作成
+
+7 `.eslintrc.json`にソースコードを記述
+
+8 `package.json`のscriptsにソースコードを記述
+
+9 ターミナルで以下を実行
+
+```yarn add --dev --exact prettier eslint-config-prettier```
+
+10 ルートdirに`.prettierrc`を作成
+
+11 7 `.prettierrc`にソースコードを記述
+
+12 ルートdirに`.vscode/settings.json`を作成
+
+13 `.vscode/settings.json`にソースコードを記述
+
+14 ターミナルで以下を実行
+
+```yarn add --dev husky lint-staged```
+
+15 `package.json`に`lint-staged`以下を記述
+
+16 ターミナルで以下を実行(.huskeyフォルダーが作成される)
+
+```yarn husky install```
+
+17 `.husky/pre-commit`と`.husky/pre-push`にソースコードを記述
+
+18 macの実行権限付与のため、以下を実行
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+chmod a+x .husky/pre-commit 
+chmod a+x .husky/pre-push
+```
